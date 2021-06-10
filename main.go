@@ -37,5 +37,5 @@ func main() {
 	for stdin.Scan() {
 		s += stdin.Text()
 	}
-	norns.WriteMessage(websocket.TextMessage, []byte(strings.Replace(*flagSend, "<wscat>", s, 1)+"\n"))
+	norns.WriteMessage(websocket.TextMessage, []byte(strings.Replace(*flagSend, "<wscat>", s, -1)+"\n"))
 }
